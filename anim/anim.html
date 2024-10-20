@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>3D Room</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img
+          id="my-image"
+          src="https://cdn.glitch.global/92804451-0e05-4f87-8067-84977ce19a71/81381ca78368dfc5224b7de05d707ca0.jpg?v=1728358282601"
+        />
+      </a-assets>
+
+      <!-- Окружение -->
+      <a-sky color="lightblue" src="#my-image"></a-sky>
+
+      <!-- Пол (уменьшен до 5x5) -->
+      <a-plane
+        src="https://cdn.glitch.global/92804451-0e05-4f87-8067-84977ce19a71/marble_seamless_texture_3038.jpg?v=1728357896595"
+        position="1.5 0 2"
+        rotation="-90 0 0"
+        width="8"
+        height="5"
+        color="#DCDCDC"
+      ></a-plane>
+
+<!-- Передняя стена (светло-голубая) -->
+<a-box 
+  position="1.5 1.5 4.5" 
+  width="8" 
+  height="3" 
+  depth="0.1" 
+  color="#A6E7FF"
+></a-box>
+
+<!-- Задняя стена (светло-бежевая) -->
+<a-box 
+  position="1.5 1.5 -0.5" 
+  width="8" 
+  height="3" 
+  depth="0.1" 
+  color="#FFEFD5"
+></a-box>
+
+<!-- Левая стена (светло-зелёная) -->
+<a-box 
+  position="-2.5 1.5 2" 
+  width="5" 
+  height="3" 
+  depth="0.1" 
+  rotation="0 90 0" 
+  color="#D4EDDA"
+></a-box>
+
+<!-- Правая стена -->
+<!-- Верхняя часть стены (над окном, светло-серая) -->
+<a-box position="5.5 2.5 2" width="5" height="1" depth="0.1" rotation="0 90 0" color="#F0F0F0"></a-box>
+
+<!-- Левая часть стены (слева от окна, светло-серая) -->
+<a-box position="5.5 1.5 0.25" width="1.47" height="2" depth="0.1" rotation="0 90 0" color="#F0F0F0"></a-box>
+
+<!-- Правая часть стены (справа от окна, светло-серая) -->
+<a-box position="5.5 1.5 3.75" width="1.47" height="2" depth="0.1" rotation="0 90 0" color="#F0F0F0"></a-box>
+
+<!-- Нижняя часть стены (под окном, светло-серая) -->
+<a-box position="5.5 0.5 2" width="5" height="1" depth="0.1" rotation="0 90 0" color="#F0F0F0"></a-box>
+
+
+
+      <!-- Мебель -->
+
+      <!-- Тумбочка -->
+      <a-box position="0 0.5 0" color="grey"></a-box>
+      <a-box position="0 1 0" width="1" height="0.01" color="black"></a-box>
+      <a-box
+        position="0 0.7 0.009"
+        width="1"
+        height="0.02"
+        color="black"
+      ></a-box>
+      <a-box
+        position="0 0.5 0.009"
+        width="0.02"
+        height="1"
+        color="black"
+        rotation="90 0 0"
+      ></a-box>
+      <a-box
+        position="-0.25 0.85 0.01"
+        width="0.2"
+        height="0.05"
+        color="black"
+      ></a-box>
+      <a-box
+        position="0.25 0.85 0.01"
+        width="0.2"
+        height="0.05"
+        color="black"
+      ></a-box>
+      <a-box
+        depth="1"
+        position="-0.5 0.5 0.001"
+        width="1"
+        height="0.002"
+        color="black"
+        rotation="90 90 0"
+      ></a-box>
+      <a-box
+        depth="1"
+        position="0.5 0.5 0.001"
+        width="1"
+        height="0.002"
+        color="black"
+        rotation="90 90 0"
+      ></a-box>
+
+      <!-- Раковина -->
+      <a-box position="-1 0.5 0" color="grey"></a-box>
+      <a-circle
+        position="-1 1.01 0"
+        color="black"
+        radius="0.45"
+        rotation="-90 0 0"
+      ></a-circle>
+      <a-cone
+        position="-1.4 1 -0.4"
+        color="black"
+        radius-bottom="0.05"
+        radius-top="0.05"
+      ></a-cone>
+
+      <!-- Тумбочка слева от раковины-->
+      <a-box position="-1 0.5 1" color="grey"></a-box>
+      <a-box position="-1 1 1" width="1" height="0.01" color="black"></a-box>
+      <a-box
+        position="-0.99 0.7 1"
+        width="1"
+        height="0.02"
+        color="black"
+      ></a-box>
+      <a-box
+        position="-0.99 0.5 1"
+        width="0.02"
+        height="1"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        position="-0.99 0.85 0.75"
+        width="0.2"
+        height="0.05"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        position="-0.99 0.85 1.25"
+        width="0.2"
+        height="0.05"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        depth="1"
+        position="-0.99 0.5 1.5"
+        width="1"
+        height="0.002"
+        color="black"
+        rotation="90 0 0"
+      ></a-box>
+
+      <!-- Плита -->
+      <a-box position="-1 0.5 2" color="grey"></a-box>
+      <a-box position="-1 1 2" width="1" height="0.01" color="white"></a-box>
+      <a-box
+        position="-0.99 0.85 2"
+        width="0.2"
+        height="0.05"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+
+      <!-- Комфорки над плитой -->
+      <a-cylinder
+        position="-0.8 1.01 1.8"
+        radius="0.15"
+        height="0.02"
+        color="black"
+      ></a-cylinder>
+      <a-cylinder
+        position="-0.8 1.01 2.2"
+        radius="0.15"
+        height="0.02"
+        color="black"
+      ></a-cylinder>
+      <a-cylinder
+        position="-1.2 1.01 1.8"
+        radius="0.15"
+        height="0.02"
+        color="black"
+      ></a-cylinder>
+      <a-cylinder
+        position="-1.2 1.01 2.2"
+        radius="0.15"
+        height="0.02"
+        color="black"
+      ></a-cylinder>
+
+      <!-- Холодильник -->
+      <a-box
+        id="fridgeBody"
+        position="2 1.5 0"
+        width="1"
+        height="3"
+        depth="1"
+        color="#D3D3D3"
+        material="metalness: 0.6; roughness: 0.4"
+      ></a-box>
+
+      <!-- Вращающаяся ось двери -->
+      <a-entity id="fridgeDoorPivot" position="2.5 1.5 0.5">
+        <!-- Дверь холодильника с ручкой, смещённая относительно оси -->
+        <a-box
+          id="fridgeDoor"
+          position="-0.5 0 0"
+          width="1"
+          height="3"
+          depth="0.1"
+          color="#B0C4DE"
+          material="metalness: 0.6; roughness: 0.4"
+          rotation="0 0 0"
+        >
+          <!-- Ручка -->
+          <a-box
+            id="doorHandle"
+            position="-0.45 0 0.05"
+            width="0.05"
+            height="0.5"
+            depth="0.1"
+            color="#696969"
+          ></a-box>
+        </a-box>
+      </a-entity>
+       <!-- ПМ -->
+      <a-box position="1 0.5 0" color="grey"></a-box>
+      <a-box position="1 1 0" width="1" height="0.01" color="black"></a-box>
+      <a-box
+        position="1 0.85 0.01"
+        width="0.2"
+        height="0.05"
+        color="black"
+      ></a-box>
+      <a-box
+        depth="1"
+        position="1.5 0.5 0.001"
+        width="1"
+        height="0.002"
+        color="black"
+        rotation="90 90 0"
+      ></a-box>
+<!-- Стулья -->
+
+      <a-box
+        position="1.55 0.7 3"
+        width="0.7"
+        height="0.5"
+        depth="0.1"
+        color="grey"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        position="1.55 0.7 3"
+        width="0.7"
+        height="0.45"
+        depth="0.015"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        position="1.8 0.5 3"
+        width="0.7"
+        height="0.5"
+        depth="0.1"
+        color="grey"
+        rotation="90 90 0"
+      ></a-box>
+      <a-box
+        position="1.8 0.5 3"
+        width="0.7"
+        height="0.5"
+        depth="0.015"
+        color="black"
+        rotation="90 90 0"
+      ></a-box>
+      <a-box
+        position="1.7 0.2 3"
+        width="0.2"
+        height="0.5"
+        depth="0.2"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+
+      <a-box
+        position="4.2 0.5 3"
+        width="0.7"
+        height="0.5"
+        depth="0.1"
+        color="grey"
+        rotation="90 90 0"
+      ></a-box>
+      <a-box
+        position="4.2 0.5 3"
+        width="0.7"
+        height="0.5"
+        depth="0.015"
+        color="black"
+        rotation="90 90 0"
+      ></a-box>
+      <a-box
+        position="4.45 0.7 3"
+        width="0.7"
+        height="0.5"
+        depth="0.1"
+        color="grey"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        position="4.45 0.7 3"
+        width="0.7"
+        height="0.5"
+        depth="0.015"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        position="4.3 0.2 3"
+        width="0.2"
+        height="0.5"
+        depth="0.2"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+<!-- Тумбочка самая левая-->
+      <a-box position="-1 0.5 3" color="grey"></a-box>
+      <a-box position="-1 1 3" width="1" height="0.01" color="black"></a-box>
+      <a-box
+        position="-0.99 0.7 3"
+        width="1"
+        height="0.02"
+        color="black"
+      ></a-box>
+      <a-box
+        position="-0.99 0.5 3"
+        width="0.02"
+        height="1"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        position="-0.99 0.85 2.75"
+        width="0.2"
+        height="0.05"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        position="-0.99 0.85 3.25"
+        width="0.2"
+        height="0.05"
+        color="black"
+        rotation="0 90 0"
+      ></a-box>
+      <a-box
+        depth="1"
+        position="-0.99 0.5 2.5"
+        width="1"
+        height="0.002"
+        color="black"
+        rotation="90 0 0"
+      ></a-box>
+      <a-box
+        depth="1"
+        position="-0.99 0.5 3.5"
+        width="1"
+        height="0.002"
+        color="black"
+        rotation="90 0 0"
+      ></a-box>
+      <!-- Стол -->
+      <a-box
+        position="3 0.44 3"
+        width="0.15"
+        height="0.15"
+        color="black"
+        rotation="90 0 0"
+      ></a-box>
+      <a-cylinder
+        position="3 0.9 3"
+        width="0.05"
+        height="0.1"
+        color="grey"
+      ></a-cylinder>
+      <a-cylinder
+        position="3 0.9 3"
+        width="0.05"
+        height="0.015"
+        color="black"
+      ></a-cylinder>
+
+      <!-- Телевизор -->
+      <a-box
+        position="3 2.5 4.4"
+        width="1.5"
+        height="1"
+        depth="0.1"
+        color="grey"
+        rotation="0 0 0"
+      ></a-box>
+      <a-box
+        position="3 2.5 4.35"
+        width="1.5"
+        height="1"
+        depth="0.001"
+        color="black"
+        rotation="0 0 0"
+      ></a-box>
+<!-- Окно в правой стене -->
+<a-box 
+  position="5.5 1.5 2" 
+  width="2" 
+  height="1" 
+  depth="0.1" 
+  rotation="0 90 0" 
+  color="#ADD8E6" 
+  opacity="0.5"
+></a-box>
+      <!-- Камера с курсором -->
+      <a-camera position="0 1.5 4">
+        <a-cursor></a-cursor>
+      </a-camera>
+
+      <!-- Скрипт для управления дверью холодильника -->
+      <script>
+        var doorPivot = document.querySelector("#fridgeDoorPivot");
+        var isOpen = false;
+
+        function toggleDoor() {
+          if (isOpen) {
+            doorPivot.setAttribute(
+              "animation",
+              "property: rotation; to: 0 0 0; dur: 1000"
+            );
+          } else {
+            doorPivot.setAttribute(
+              "animation",
+              "property: rotation; to: 0 90 0; dur: 1000"
+            );
+          }
+          isOpen = !isOpen;
+        }
+
+        doorPivot.addEventListener("click", toggleDoor);
+      </script>
+    </a-scene>
+  </body>
+</html>
